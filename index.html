@@ -1,0 +1,347 @@
+<html>
+    <head>
+        <title>WEBSITE</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width = device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll("#bottomNav a");
+    const overlay = document.getElementById("overlay");
+    const overlayContent = document.querySelector(".overlay-content");
+    const imageOverlayElement = document.querySelector(".image-overlay");
+    const headingsInsideOverlay = imageOverlayElement.querySelectorAll("h1, h2, h3");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetTab = this.getAttribute("data-tab");
+            showOverlay(targetTab);
+        });
+    });
+
+    function showOverlay(tabName) {
+    overlay.style.display = "block";
+    overlayContent.innerHTML = "";
+
+    let popupContent = '<div class="popup-images">';
+    if (tabName === "product-design") {
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<div class="image-wrapper">';
+        popupContent += '<img src="files/cycle.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-gradient"></div>'; // Overlay color gradient
+        popupContent += '<div class="overlay-text">Product Design <hr> </div>';
+        popupContent += '</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        // Add more image containers with different images and text
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<img src="files/cycle.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-text">Another Design<hr></div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<img src="files/cycle.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px; ">'; // Adjust the width and height
+        popupContent += '<div class="overlay-text">Another Design<hr></div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<img src="files/cycle.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-text">Another Design<hr></div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<img src="files/cycle.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-text">Another Design<hr></div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<img src="files/cycle.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-text">Another Design<hr></div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<img src="files/cycle.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-text">Another Design<hr></div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        // Repeat the above pattern for additional images
+    } else if (tabName === "graphic-design") {
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="graphic_design_page.html" class="image-link">';
+        popupContent += '<img src="files/cycle.jpg" alt="Graphic Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-text">Graphic Design</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        // Add more image containers with different images and text
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="graphic_design_page.html" class="image-link">';
+        popupContent += '<img src="files/cycle.jpg" alt="Graphic Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-text">Another Graphic</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        // Repeat the above pattern for additional images
+    }
+    else if (tabName === "logofolio") {
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<div class="image-wrapper">';
+        popupContent += '<img src="files/tf.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-gradient"></div>'; // Overlay color gradient
+        popupContent += '<div class="overlay-text">Product Design <hr> </div>';
+        popupContent += '</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<div class="image-wrapper">';
+        popupContent += '<img src="files/pak.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-gradient"></div>'; // Overlay color gradient
+        popupContent += '<div class="overlay-text">Product Design <hr> </div>';
+        popupContent += '</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<div class="image-wrapper">';
+        popupContent += '<img src="files/hk.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-gradient"></div>'; // Overlay color gradient
+        popupContent += '<div class="overlay-text">Product Design <hr> </div>';
+        popupContent += '</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<div class="image-wrapper">';
+        popupContent += '<img src="files/bp.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-gradient"></div>'; // Overlay color gradient
+        popupContent += '<div class="overlay-text">Product Design <hr> </div>';
+        popupContent += '</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+        
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<div class="image-wrapper">';
+        popupContent += '<img src="files/award.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-gradient"></div>'; // Overlay color gradient
+        popupContent += '<div class="overlay-text">Product Design <hr> </div>';
+        popupContent += '</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+        
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<div class="image-wrapper">';
+        popupContent += '<img src="files/cloud.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-gradient"></div>'; // Overlay color gradient
+        popupContent += '<div class="overlay-text">Product Design <hr> </div>';
+        popupContent += '</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<div class="image-wrapper">';
+        popupContent += '<img src="files/ashman.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-gradient"></div>'; // Overlay color gradient
+        popupContent += '<div class="overlay-text">Product Design <hr> </div>';
+        popupContent += '</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+        popupContent += '<div class="image-container">';
+        popupContent += '<a href="product_design_page.html" class="image-link">';
+        popupContent += '<div class="image-wrapper">';
+        popupContent += '<img src="files/relax.jpg" alt="Product Design" style="max-width: 320px; max-height: 320px;">'; // Adjust the width and height
+        popupContent += '<div class="overlay-gradient"></div>'; // Overlay color gradient
+        popupContent += '<div class="overlay-text">Product Design <hr> </div>';
+        popupContent += '</div>';
+        popupContent += '</a>';
+        popupContent += '</div>';
+
+
+
+        // Repeat the above pattern for additional images
+    }
+    // Add more conditions for other tabs and images
+    popupContent += '</div>';
+
+    overlayContent.innerHTML = popupContent;
+}
+
+
+
+});
+
+function closeOverlay() {
+    const overlay = document.getElementById("overlay");
+    overlay.style.display = "none";
+}
+</script>
+
+    </head>
+    <body>
+        <section id="banner">
+            <h2 class="mainlogo" data-maxheight="14" style="font-size: 14px; height: 14px; line-height: 14px;">SABAH ZAMAN</h2>
+            <div class="banner-text">
+                <h1>Not just a designer but a multi-disciplinary problem solver</h1>
+                <div class="banner-btn">
+                    <a href="#"><span></span>Explore More</a>
+                </div>
+            </div>
+            <div class="down-arrow">
+                <a href="#feature"><img src="files/arrow.png" alt="Scroll Down"></a>
+            </div>
+        </section>
+
+<script>
+    document.querySelector('.down-arrow a').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    const targetPosition = targetSection.offsetTop;
+    const currentPosition = window.pageYOffset;
+    const distance = targetPosition - currentPosition;
+
+    const duration = 1000; // Adjust the duration of the scroll
+
+    const startTime = performance.now();
+    function scroll(time) {
+        const elapsed = time - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = easeOutCubic(progress);
+
+        window.scrollTo(0, currentPosition + distance * ease);
+
+        if (progress < 1) {
+            requestAnimationFrame(scroll);
+        }
+    }
+
+    function easeOutCubic(t) {
+        return (--t) * t * t + 1;
+    }
+
+    requestAnimationFrame(scroll);
+});
+</script>        
+ 
+ <div id="bottomNav">
+    <nav>
+        <ul>
+            <li><a href="#" data-tab="product-design">PRODUCT DESIGN</a></li>
+            <li><a href="#" data-tab="graphic-design">GRAPHIC DESIGN</a></li>
+            <li><a href="#" data-tab="rebranding">REBRANDING</a></li>
+            <li><a href="#" data-tab="amazon-listing">AMAZON LISTING OPTIM</a></li>
+            <li><a href="#" data-tab="3d-modelling">3D MODELLING</a></li>
+            <li><a href="#" data-tab="logofolio">LOGOFOLIO</a></li>
+            <li><a href="#" data-tab="photography">PHOTOGRAPHY</a></li>
+            <li><a href="#" data-tab="achievements">ACHIEVEMENTS</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<div id="overlay" class="overlay">
+    <div class="overlay-content">
+        <div class="popup-images">
+            <a href="product_design_page.html">
+                <div class="image-overlay">
+                    <img src="files/cycle.jpg" alt="Product Design">
+                </div>
+            </a>
+            <a href="graphic_design_page.html">
+                <div class="image-overlay">
+                    <img src="files/cycle.jpg" alt="Graphic Design">
+                </div>
+            </a>
+            <!-- Add more images and overlays as needed -->
+        </div>
+    </div>
+    <span class="close-overlay" onclick="closeOverlay()">&times;</span>
+</div>
+
+
+
+
+ 
+
+ <!--features-->
+ <section id="feature" >
+    <div class="title-text">
+    </div>
+<div class="feature-box">
+    <div class="features">
+        
+        <div class="feature-desc">
+            <div class="feature-text">
+                <p>Hello, I am an accomplished Industrial Designer with a rich and dynamic background spanning over six years. My journey in the world of design has been defined by a genuine passion for innovation and a relentless drive to make a positive impact. I thrive in collaborative and diverse team environments, where I relish the opportunity to engage with individuals from varied disciplines, each contributing their unique perspectives. It's within this collective synergy that I find the most fertile ground for creative thinking and the development of truly effective solutions.</p>
+                <p>Throughout my professional trajectory, I've honed a reputation as a top-tier contributor, consistently delivering outcomes that exceed expectations. This extends to the capacity to make critical decisions even under high-pressure circumstances, showcasing my ability to navigate complex challenges with poise and strategic thinking. My problem-solving acumen has been refined through practical experiences, each scenario adding to my toolkit of innovative strategies.</p>
+                <p>What sets me apart is not just my individual achievements, but my role as a dedicated team player. I'm committed to fostering an environment of mutual support, where knowledge-sharing and the exchange of insights become second nature. It's this spirit of collaboration that leads to positive transformations, creating ripples of change that extend beyond the confines of projects and into the broader realm.</p>
+                <p>In every endeavor, I'm driven by the pursuit of positive change and meaningful results. I approach design as a vessel for impact, always seeking opportunities to infuse creativity with purpose. With an unwavering dedication to creating solutions that matter, I am excited to continue making a lasting mark in the world of industrial design.</p>
+            </div>
+        </div>
+    </div>
+    <div class="features-img">
+        <img src="files/sabah.jpg">
+    </div>
+</div>
+ </section>
+ <script>
+  // Add this JavaScript code to your script
+
+const featureSection = document.getElementById("feature");
+const featuresImg = document.querySelector(".features-img img");
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+window.addEventListener("scroll", () => {
+    if (isElementInViewport(featureSection)) {
+        featuresImg.classList.add("animate");
+    } else {
+        featuresImg.classList.remove("animate");
+    }
+});
+
+ </script>
+<section id="footer">
+    <div class="Title-text">
+    <p>All work © Sabah Zaman 2023</p>
+    <a href="https://www.instagram.com/" target="_blank"><img src="files/instagram.png" alt="Instagram"></a>
+    <a href="https://www.linkedin.com/in/sabahzaman/" target="_blank"><img src="files/linked.png" alt="LinkedIn"></a>
+    <a href="https://www.behance.net/sabahzaman54" target="_blank"><img src="files/behance.png" alt="Behance"></a>
+    </div>
+</section>
+    </body>
+</html>
