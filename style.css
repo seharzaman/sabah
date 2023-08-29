@@ -1,342 +1,408 @@
 *{
-margin: 0;
-padding: 0;
-
-
-}
-#banner{
-    background: linear-gradient(rgba(89, 70, 70, 0.5), #fff01f73),url(files/markers.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-.mainlogo{
-    width: 140px;
-    position: absolute;
-    top: 4%;
-    left: 2%;
-    color: #dfd4d4;
-    font-family: 'century gothic', sans-serif;
-}
-.banner-text{
-    text-align: center;
-    color: #000000da;
-    padding-top: 300px;
-    font-size: 20px;
-    font-style: bold;
-    font-family: 'century gothic', sans-serif;
-}
-
-.banner-btn{
-    font-family: 'century gothic', sans-serif;
-    margin: 50px auto 0;
-    padding-top: 0px;
-    font-size: 28px;
-}
-.banner-btn a{
-width: 200px;
-text-decoration: none;
-display: inline-block;
-margin: 0 10px;
-padding: 12px 0;
-background-color: #00000081;
-color:#fff01f81;
-border: .5px solid #78776979;
-position: relative;
-z-index: 1;
-font-family: 'century gothic', sans-serif;
-border-radius: 3%;
-}
-
-.down-arrow {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.down-arrow img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.down-arrow img:hover {
-    transform: translateY(3px); /* Add a subtle lift effect on hover */
-}
-
-#bottomNav {
-    text-align: center;
-    background-color: #ffffff; 
-}
-
-#bottomNav ul {
-    list-style-type: none;
+    margin: 0;
     padding: 0;
-    margin: 0;
-    display: inline-block;
-}
-
-#bottomNav li {
-    display: inline-block;
-    margin: 0;
-}
-
-#bottomNav a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#bottomNav a:hover {
-    background-color: #fff01f79;
-    color: #000000;
-}
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.974);
-    z-index: 9999;
-    overflow: hidden;
-}
-
-.overlay-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.close-overlay {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-}
-
-.popup-images img{
-   
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 100px;
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-  background: linear-gradient(rgba(0,0,0,0.5));
-  border-radius: 3%;
-}
-
-.image-container {
-    position: relative;
-    margin: 10px;
-    display: inline-block;
-    padding-left: 5px;
-    padding-bottom: 5px;
-    border: #6e5d5d;
-}
-
-.image-link {
-    position: relative;
-    display: block;
-    text-align: center;
-}
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #dfd4d4;
-    padding: 5px;
-    font-size: 20px;
-    opacity: 0; /* Hide by default */
-    transition: opacity 0.3s ease;
     
-}
-hr{
-    background: #dfd4d4;
-}
-.image-link:hover .overlay-text {
-    bottom: 60%;
-    opacity: 1; /* Show on hover */
-}
-.image-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 320px; /* Adjust the width as needed */
-    height: 320px; /* Adjust the height as needed */
-}
-
-.overlay-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), #fff01f79); /* Adjust the gradient colors */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease;
-}
-
-.image-wrapper:hover .overlay-gradient {
-    opacity: 1; /* Fade in on hover */
-}
-
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    padding: 10px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease;
-}
-
-.image-wrapper:hover .overlay-text {
-    opacity: 1; /* Fade in on hover */
-}
-
-@media screen and (max-width: 770px){
+    
+    }
+    #banner {
+        background: url(files/markers.jpg);
+        background-size: cover; /* Adjust the percentage to control the visible area of the background */
+        background-position: center;
+        height: 100vh; /* Adjust the percentage to control the height of the element */
+    }
+    
+    .mainlogo{
+        width: 140px;
+        position: absolute;
+        top: 4%;
+        left: 2%;
+        color: rgb(0, 0, 0);
+        font-family: 'cavier dreams', sans-serif;
+        font-size: 18px;
+    }
     .banner-text{
-        font-size: 44px;
+        text-align: center;
+        color: #000000da;
+        padding-top: 300px;
+        font-size: 20px;
+        font-style: bold;
+        font-family: 'century gothic', sans-serif;
     }
+    
+    .banner-btn{
+        font-family: 'century gothic', sans-serif;
+        margin: 50px auto 0;
+        padding-top: 53px;
+        font-size: 28px;
+        padding-right: 10px;
+    }
+    
     .banner-btn a{
-        display: block;
-        margin: 20px auto;
-    }
-}
-
-/*--feature--*/
-
-#feature{
-    width: 100%;
-    padding: 70px 0;
-    background-color: #000000;
-}
-.title-text{
-    text-align: center;
-    padding-bottom: 70px;
-}
-.title-text p{
-    margin: auto;
-    font-size: 20ps;
-    color: #ffffff;
-    font-weight: bold;
+    width: 200px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px 0;
+    background-color: rgba(36, 140, 130, 0.627);
+    color:#000000;
+    border: .5px solid #78776979;
     position: relative;
     z-index: 1;
-    display: inline-block;
-}
-
-.title-text h1{
-    font-size: 50px;
-    color: #000000;
+    font-family: 'century gothic', sans-serif;
+    font-weight: bold;
+    }
     
-}
-.feature-box{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-}
-.features{
-    flex-basis: 50%;
-}
-.features-img{
-    flex-basis: 50%;
-    margin-bottom: 10%;
-    margin-top: 5%;
+    .down-arrow {
+        text-align: center;
+        margin-top: 10px;
+    }
     
-}
-.features-img img {
-    margin-bottom: 20%;
-    margin-top: 5%;
-    width: 600px;
-    height: 600px;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 1s, transform 1s;
-    animation: slideInImage 1s ease-in-out forwards;
-    border-radius: 3%;
-}
-
-@keyframes slideInImage {
-    to {
+    .down-arrow img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    
+    .down-arrow img:hover {
+        transform: translateY(3px); /* Add a subtle lift effect on hover */
+    }
+    
+    #bottomNav {
+        text-align: center;
+        background-color: #ffffff; 
+    }
+    
+    #bottomNav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    #bottomNav li {
+        display: inline-block;
+        margin: 0;
+    }
+    
+    #bottomNav a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    #bottomNav a:hover {
+        background-color: #3a3a3aae;
+        color: #000000;
+    }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #3a3a3a;
+        z-index: 9999;
+        /* Remove overflow: hidden; */
+    }
+    
+    .overlay-content {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        justify-content: flex-start; /* Start content from the top */
+        align-items: center;
+        height: 100%;
+        /* Add overflow-y: auto; for vertical scrolling */
+        overflow-y: auto;
+    }
+    
+    .close-overlay {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+    }
+    
+    .popup-images img{
+       
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(#6e5d5d);
+      
+    }
+    
+    .image-container {
+        position: relative;
+        margin: 10px;
+        display: inline-block;
+        border: #6e5d5d;
+    }
+    
+    .image-link {
+        position: relative;
+        display: block;
+        text-align: center;
+    }
+    .overlay-text {
+        position: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #dfd4d4;
+       
+       
+        opacity: 0; /* Hide by default */
+        transition: opacity 0.3s ease;
+        font-weight: bold;
+    }
+    hr{
+        background: #dfd4d4;
+    }
+    .image-link:hover .overlay-text {
+        bottom: 60%;
+        opacity: 1; /* Show on hover */
+    }
+    .image-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 350px; /* Adjust the width as needed */
+        height: 350px; /* Adjust the height as needed */
+    }
+    
+    .overlay-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#3a3a3adc, #3a3a3adc); /* Adjust the gradient colors */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s ease;
+    }
+    
+    .image-wrapper:hover .overlay-gradient {
+        opacity: 1; /* Fade in on hover */
+    }
+    
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s ease;
+    }
+    
+    .image-wrapper:hover .overlay-text {
+        opacity: 1; /* Fade in on hover */
+    }
+    
+    @media screen and (max-width: 770px){
+        .banner-text{
+            font-size: 44px;
+        }
+        .banner-btn a{
+            display: block;
+            margin: 20px auto;
+        }
+    }
+    
+    /*--feature--*/
+    
+    #feature{
+        width: 100%;
+        padding: 70px 0;
+        background-color: #3a3a3a;
+    }
+    .title-text{
+        text-align: center;
+        padding-bottom: 70px;
+    }
+    .title-text p{
+        margin: auto;
+        font-size: 20ps;
+        color: #ffffff;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+    }
+    
+    .title-text h1{
+        font-size: 50px;
+        color: #ffffff;
+        
+    }
+    .feature-box{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+    }
+    .features{
+        flex-basis: 50%;
+    }
+    .features-img{
+        flex-basis: 50%;
+        margin-bottom: 10%;
+        margin-top: 5%;
+        
+    }
+    .features-img img {
+        margin-bottom: 20%;
+        margin-top: 5%;
+        width: 600px;
+        height: 700px;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 1s, transform 1s;
+        animation: slideInImage 1s ease-in-out forwards;
+        
+    }
+    
+    @keyframes slideInImage {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .features-img img.animate {
         opacity: 1;
         transform: translateX(0);
+        transition: opacity 1s, transform 1s;
     }
-}
-.features-img img.animate {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 1s, transform 1s;
-}
-.features h1{
-    margin-bottom: 20px;
-    font-weight: 100;
-    color: #ffffff;
-    margin-top: -150px;
-}
-.features-desc {
-    display: flex;
-    flex-direction: column; /* Stack the text vertically */
-    align-items: flex-start; /* Align the text to the left */;
-    margin-bottom: 70px;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.feature-text {
-    color: #ffffff;
-    max-width: 800px; /* Adjust the maximum width for readability */
-    margin: 0 auto; /* Center the text horizontally */
-    padding: 20px; /* Add some padding for better readability */
-    margin-top: -150px;
-    font-size: 18px;
-}
-
-#footer {
-    padding: 10px 0px 20px;
-    background: #ffffff;
-    height: 40px; /* Adjust the height */
-    bottom: 0;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.Title-text {
-    display: flex;
-    align-items: center;
-    color: #000000;
-}
-
-.Title-text p {
-    margin-right: 1150px; /* Adjust the spacing between text and icons */
-    color: #000000
-}
-
-.Title-text a {
-    margin-left: 0px; /* Adjust the spacing between icons */
-    margin: 20px 10px; /* Adjust margin for better alignment */
-
-}
-
-.Title-text img {
-    margin: 0 0px; /* Adjust the margin between images */
-    width: 20px;
-    height: 20px;
-}
-
+    .features h1{
+        margin-bottom: 20px;
+        font-weight: 100;
+        color: #ffffff;
+        margin-top: -150px;
+    }
+    .features-desc {
+        display: flex;
+        flex-direction: column; /* Stack the text vertically */
+        align-items: flex-start; /* Align the text to the left */;
+        margin-bottom: 70px;
+        margin-top: 5%;
+    }
+    
+    .feature-text {
+        color: rgb(255, 255, 255);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: -150px;
+        font-size: 18px;
+        font-family: 'century gothic', sans-serif;
+        text-align: left;
+        
+    }
+    
+    .yellow-text {
+        color: rgb(36, 140, 129);
+    }
+    
+    .feature-text p1 {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .feature-text p2{
+        font-size: 25px;
+        
+    }
+    #footer {
+        padding: 10px 0px 20px;
+        background: rgb(255, 255, 255);
+        height: 40px; /* Adjust the height */
+        bottom: 0;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .Title-text {
+        display: flex;
+        align-items: center;
+        color: #000000;
+    }
+    
+    .Title-text p {
+        margin-right: 1150px; /* Adjust the spacing between text and icons */
+        color: #000000
+    }
+    
+    .Title-text a {
+        margin-left: 0px; /* Adjust the spacing between icons */
+        margin: 20px 10px; /* Adjust margin for better alignment */
+    
+    }
+    
+    .Title-text img {
+        margin: 0 0px; /* Adjust the margin between images */
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Reset default margins and padding for body and image */
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Styles for the section */
+    .section2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh; /* Ensure the section takes at least the viewport height */
+        background-color: #f0f0f0;
+    }
+    
+    /* Styles for the logo */
+    .mainlogo {
+        font-size: 14px;
+        height: 14px;
+        line-height: 14px;
+        margin-top: 20px; /* Add space from the top */
+    }
+    
+    /* Styles for each image container */
+    .ashmanimg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 14px); /* Account for logo height */
+        overflow: hidden;
+    }
+    
+    /* Apply margin-top to the first image container */
+    .ashmanimg.first-image {
+        margin-top: 100px; /* Add space from the top to the first image */
+    }
+    .ashmanimg.last-image{
+        margin-bottom: 100px; /* Add space from the top to the first image */
+    }
+    /* Styles for images */
+    .ashmanimg img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* Maintain aspect ratio while fitting within the container */
+    }
+    
+    
